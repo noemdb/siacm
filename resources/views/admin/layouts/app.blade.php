@@ -31,10 +31,14 @@
 
 
 <script src="{{ asset("js/app.js") }}"></script>
-<script src="{{ asset("js/admin.js") }}"></script>
+{{-- <script src="{{ asset("js/Chart.js") }}"></script> --}}
+
 
 <!-- scripts for page -->
 @yield('scripts')
+
+
+<script src="{{ asset("js/admin.js") }}"></script>
 
 
 </body>

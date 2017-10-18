@@ -51,13 +51,13 @@
 
 
 @section('stylesheet')
-    <link rel="stylesheet" href="{{ asset('vendor/morrisjs/morris.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/morrisjs/morris.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('vendor/morrisjs/morris.css') }}"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('vendor/morrisjs/morris.css') }}"> --}}
 @endsection
 
 @section('scripts')
     <script src="{{ asset("js/Chart.js") }}"></script>
-    <script src="{{ asset("vendor/raphael/raphael.min.js") }}"></script>
-    <script src="{{ asset("vendor/morrisjs/morris.min.js") }}"></script>
-    <script src="{{ asset("data/morris-data.js") }}"></script>
+    {{-- <script src="{{ asset("vendor/raphael/raphael.min.js") }}"></script> --}}
+    {{-- <script src="{{ asset("vendor/morrisjs/morris.min.js") }}"></script> --}}
+    {{-- <script src="{{ asset("data/morris-data.js") }}"></script> --}}
 @endsection
