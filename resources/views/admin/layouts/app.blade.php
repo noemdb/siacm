@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="{{ asset('css/timeline.css') }}">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 
+
+    <!-- stylesheet for page -->
+    @yield('stylesheet')
+
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -24,8 +28,14 @@
 <body>
 @yield('body')
 
+
+
 <script src="{{ asset("js/app.js") }}"></script>
-<script src="{{ asset("js/Chart.js") }}"></script>
 <script src="{{ asset("js/admin.js") }}"></script>
+
+<!-- scripts for page -->
+@yield('scripts')
+
+
 </body>
 </html>

@@ -12,26 +12,28 @@
 */
 
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix'=>'admin','middleware'=>['auth'],'namespace'=>'Admin'], function(){
 
-Auth::routes();
+	Route::get('/', function () {
+	    return view('admin.home');
+	});
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('/', function () {
-    return view('admin.home');
 });
 
-Route::get('/admin', function () {
-    return view('admin.home');
-});
+
+
+
+
 
 Route::get('/login', function () {
     return view('admin.auth.login');
@@ -43,6 +45,10 @@ Route::get('/charts', function () {
 
 Route::get('/tables', function () {
     return View::make('admin.table');
+});
+
+Route::get('/tableavance', function () {
+    return View::make('admin.tableavance');
 });
 
 Route::get('/forms', function () {
@@ -92,3 +98,7 @@ Route::get('/progressbars', function() {
 Route::get('/collapse', function() {
     return View::make('admin.collapse');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
