@@ -9,7 +9,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -21,53 +20,24 @@ Route::group(['prefix'=>'admin','middleware'=>['auth'],'namespace'=>'Admin'], fu
         return view('admin.home');
     });
 });
-=======
-
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::group(['prefix'=>'admin','middleware'=>['auth'],'namespace'=>'Admin'], function(){
-
-	Route::get('/', function () {
-	    return view('admin.home');
-	});
-
-});
-
-
-
-
-
-
->>>>>>> 407c0d93ca46bbcfccc14e09554f8dcc3b4b35eb
 Route::get('/login', function () {
     return view('admin.auth.login');
 });
 Route::get('/charts', function () {
-    return View::make('admin.charts');
+    return View::make('admin.charts.charts');
+});
+Route::get('/flot', function () {
+    return View::make('admin.charts.flot');
+});
+Route::get('/morris', function () {
+    return View::make('admin.charts.morris');
 });
 Route::get('/tables', function () {
     return View::make('admin.table');
 });
-<<<<<<< HEAD
 Route::get('/tableavance', function () {
     return View::make('admin.tableavance');
 });
-=======
-
-Route::get('/tableavance', function () {
-    return View::make('admin.tableavance');
-});
-
->>>>>>> 407c0d93ca46bbcfccc14e09554f8dcc3b4b35eb
 Route::get('/forms', function () {
     return View::make('admin.form');
 });
@@ -104,12 +74,5 @@ Route::get('/progressbars', function() {
 Route::get('/collapse', function() {
     return View::make('admin.collapse');
 });
-<<<<<<< HEAD
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-=======
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> 407c0d93ca46bbcfccc14e09554f8dcc3b4b35eb

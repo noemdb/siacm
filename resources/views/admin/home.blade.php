@@ -237,7 +237,7 @@
                 @component('admin.widgets.panel')
                     @slot('panelTitle', 'Line Chart')
                     @slot('panelBody')
-                        @include('admin.widgets.charts.clinechart')
+                        @include('admin.charts.widgets.clinechart')
                     @endslot
                 @endcomponent
 
@@ -420,4 +420,17 @@
     </div>
     <!-- /.col-sm-12 -->
 
+@endsection
+
+@section('stylesheet')
+
+    <link rel="stylesheet" href="{{ asset('css/timeline.css') }}">
+
+@endsection
+
+@section('scripts')
+    <script src="{{ asset("js/Chart.js") }}"></script>
+    {{-- <script src="{{ asset("vendor/raphael/raphael.min.js") }}"></script> --}}
+    {{-- <script src="{{ asset("vendor/morrisjs/morris.min.js") }}"></script> --}}
+    {{-- <script src="{{ asset("data/morris-data.js") }}"></script> --}}
 @endsection

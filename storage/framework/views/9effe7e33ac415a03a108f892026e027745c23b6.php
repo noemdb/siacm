@@ -260,10 +260,21 @@
                         <li <?php echo e((Request::is('/') ? 'class="active"' : '')); ?>>
                             <a href="<?php echo e(url ('admin')); ?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
-                        <li <?php echo e((Request::is('*charts') ? 'class="active"' : '')); ?>>
-                            <a href="<?php echo e(url ('charts')); ?>"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
+
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse out">
+                                <li>
+                                    <a href="<?php echo e(url ('charts')); ?>"> Charts</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="<?php echo e(url ('morris')); ?>" class="active"> Morris.js</a>
+                                </li>
+                            </ul>
                             <!-- /.nav-second-level -->
                         </li>
+
                         <li>
                             <a href="#"><i class="fa fa-table fa-fw"></i> Tables<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">

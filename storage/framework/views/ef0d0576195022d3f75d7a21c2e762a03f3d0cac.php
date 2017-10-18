@@ -10,8 +10,11 @@
 
     <link rel="stylesheet" href="<?php echo e(asset('css/app.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('css/admin.css')); ?>">
-    <link rel="stylesheet" href="<?php echo e(asset('css/timeline.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('css/font-awesome.min.css')); ?>">
+
+
+    <!-- stylesheet for page -->
+    <?php echo $__env->yieldContent('stylesheet'); ?>
 
     <!-- Scripts -->
     <script>
@@ -24,8 +27,18 @@
 <body>
 <?php echo $__env->yieldContent('body'); ?>
 
+
+
 <script src="<?php echo e(asset("js/app.js")); ?>"></script>
-<script src="<?php echo e(asset("js/Chart.js")); ?>"></script>
+
+
+
+<!-- scripts for page -->
+<?php echo $__env->yieldContent('scripts'); ?>
+
+
 <script src="<?php echo e(asset("js/admin.js")); ?>"></script>
+
+
 </body>
 </html>

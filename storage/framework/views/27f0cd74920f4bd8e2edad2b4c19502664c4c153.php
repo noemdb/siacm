@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('section'); ?>
 
-    <div class="col-sm-12">
+    <div class="col-md-12">
         <div class="row">
             <div class="col-sm-6">
                 <?php $__env->startComponent('admin.widgets.panel'); ?>
@@ -119,4 +119,5 @@
     <!-- /.col-sm-12 -->
 
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('admin.layouts.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

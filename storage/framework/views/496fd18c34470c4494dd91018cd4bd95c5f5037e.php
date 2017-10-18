@@ -3,6 +3,7 @@
 <?php $__env->startSection('section'); ?>
 
     <div class="col-sm-12">
+
         <div class="row">
             <div class="col-sm-6">
                 <?php $__env->startComponent('admin.widgets.panel'); ?>
@@ -40,8 +41,22 @@
         </div>
         <!-- /.row -->
     </div>
+
+
     <!-- /.col-sm-12 -->
 
 <?php $__env->stopSection(); ?>
 
+
+<?php $__env->startSection('stylesheet'); ?>
+    <link rel="stylesheet" href="<?php echo e(asset('vendor/morrisjs/morris.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('vendor/morrisjs/morris.css')); ?>">
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('scripts'); ?>
+    <script src="<?php echo e(asset("js/Chart.js")); ?>"></script>
+    <script src="<?php echo e(asset("vendor/raphael/raphael.min.js")); ?>"></script>
+    <script src="<?php echo e(asset("vendor/morrisjs/morris.min.js")); ?>"></script>
+    <script src="<?php echo e(asset("data/morris-data.js")); ?>"></script>
+<?php $__env->stopSection(); ?>
 <?php echo $__env->make('admin.layouts.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -235,7 +235,7 @@
                 <?php $__env->startComponent('admin.widgets.panel'); ?>
                     <?php $__env->slot('panelTitle', 'Line Chart'); ?>
                     <?php $__env->slot('panelBody'); ?>
-                        <?php echo $__env->make('admin.widgets.charts.clinechart', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                        <?php echo $__env->make('admin.charts.widgets.clinechart', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                     <?php $__env->endSlot(); ?>
                 <?php echo $__env->renderComponent(); ?>
 
@@ -419,4 +419,18 @@
     <!-- /.col-sm-12 -->
 
 <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('stylesheet'); ?>
+
+    <link rel="stylesheet" href="<?php echo e(asset('css/timeline.css')); ?>">
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('scripts'); ?>
+    <script src="<?php echo e(asset("js/Chart.js")); ?>"></script>
+    
+    
+    
+<?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('admin.layouts.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
