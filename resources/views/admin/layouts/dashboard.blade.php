@@ -17,8 +17,10 @@
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    <a class="dropdown-toggle alert-primary" data-toggle="dropdown" href="#">
+                        <span class="label label-primary">
+                            <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        </span>
                     </a>
                     <ul class="dropdown-menu dropdown-messages">
                         <li>
@@ -71,8 +73,10 @@
                 </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    <a class="dropdown-toggle alert-info" data-toggle="dropdown" href="#">
+                        <span class="label label-info">
+                            <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        </span>
                     </a>
                     <ul class="dropdown-menu dropdown-tasks">
                         <li>
@@ -154,8 +158,10 @@
                 </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    <a class="dropdown-toggle alert-warning" data-toggle="dropdown" href="#">
+                        <span class="label label-warning">
+                            <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        </span>
                     </a>
                     <ul class="dropdown-menu dropdown-alerts">
                         <li>
@@ -214,8 +220,10 @@
                 </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    <a class="dropdown-toggle alert-danger" data-toggle="dropdown" href="#">
+                        <span class="label label-danger">
+                            <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        </span>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>
@@ -258,8 +266,16 @@
                             <a href="{{ url ('charts') }}"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
                             <!-- /.nav-second-level -->
                         </li>
-                        <li {{ (Request::is('*tables') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('tables') }}"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        <li>
+                            <a href="#"><i class="fa fa-table fa-fw"></i> Tables<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li {{ (Request::is('*tables') ? 'class="active"' : '') }}>
+                                    <a href="{{ url ('tables') }}"><i class="fa fa-table fa-fw"></i> Tables</a>
+                                </li>
+                                <li {{ (Request::is('*tableavance') ? 'class="active"' : '') }}>
+                                    <a href="{{ url ('tableavance') }}"><i class="fa fa-table fa-fw"></i> Tables Advance</a>
+                                </li>
+                            </ul>
                         </li>
                         <li {{ (Request::is('*forms') ? 'class="active"' : '') }}>
                             <a href="{{ url ('forms') }}"><i class="fa fa-edit fa-fw"></i> Forms</a>
