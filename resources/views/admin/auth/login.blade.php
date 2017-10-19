@@ -6,10 +6,11 @@
                 @component('admin.widgets.panel')
                     @slot ('panelTitle', 'Please Sign In')
                     @slot ('panelBody')
-                        <form class="form-horizontal" role="form" method="POST" action="#">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
+                            {{ csrf_field() }}
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <div class="col-md-12">
-                                    <label for="email" class="control-label">Username</label>
+                                    <label for="email" class="control-label">Email</label>
 
                                     <input id="email" type="email" class="form-control" name="email"
                                            value="{{ old('email') }}" required autofocus>

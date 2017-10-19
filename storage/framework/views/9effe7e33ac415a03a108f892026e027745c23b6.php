@@ -250,19 +250,19 @@
                             </div>
                             <!-- /input-group -->
                         </li>
-                        <li <?php echo e((Request::is('/') ? 'class="active"' : '')); ?>>
-                            <a href="<?php echo e(url ('admin')); ?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        <li>
+                            <a href="<?php echo e(url ('dashboard')); ?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
 
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li <?php echo e((Request::is('*charts') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('charts')); ?>"> Charts</a>
+                                <li>
+                                    <a href="<?php echo e(url ('admin/charts/sbadmin')); ?>"> SBAdmin</a>
                                 </li>
                                 
-                                <li <?php echo e((Request::is('*morris') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('morris')); ?>"> Morris.js</a>
+                                <li>
+                                    <a href="<?php echo e(url ('admin/charts/morris')); ?>"> Morris.js</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -272,45 +272,45 @@
                             <a href="#"><i class="fa fa-table fa-fw"></i> Tables<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li <?php echo e((Request::is('*tables') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('tables')); ?>"><i class="fa fa-table fa-fw"></i> Tables</a>
+                                    <a href="<?php echo e(url ('admin/tables/simple')); ?>"><i class="fa fa-table fa-fw"></i> Tables</a>
                                 </li>
                                 <li <?php echo e((Request::is('*tableavance') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('tableavance')); ?>"><i class="fa fa-table fa-fw"></i> Tables Advance</a>
+                                    <a href="<?php echo e(url ('admin/tables/tableavance')); ?>"><i class="fa fa-table fa-fw"></i> Tables Advance</a>
                                 </li>
                             </ul>
                         </li>
                         <li <?php echo e((Request::is('*forms') ? 'class="active"' : '')); ?>>
-                            <a href="<?php echo e(url ('forms')); ?>"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                            <a href="<?php echo e(url ('admin/forms')); ?>"><i class="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li <?php echo e((Request::is('*panels') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('panels')); ?>">Panels and Collapsibles</a>
+                                    <a href="<?php echo e(url ('admin/panels')); ?>">Panels and Collapsibles</a>
                                 </li>
                                 <li <?php echo e((Request::is('*buttons') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('buttons' )); ?>">Buttons</a>
+                                    <a href="<?php echo e(url ('admin/buttons' )); ?>">Buttons</a>
                                 </li>
                                 <li <?php echo e((Request::is('*notifications') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url('notifications')); ?>">Alerts</a>
+                                    <a href="<?php echo e(url('admin/notifications')); ?>">Alerts</a>
                                 </li>
                                 <li <?php echo e((Request::is('*typography') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('typography')); ?>">Typography</a>
+                                    <a href="<?php echo e(url ('admin/typography')); ?>">Typography</a>
                                 </li>
                                 <li <?php echo e((Request::is('*icons') ? 'class="active"' : '')); ?>>
                                     <a href="<?php echo e(url ('icons')); ?>"> Icons</a>
                                 </li>
                                 <li <?php echo e((Request::is('*grid') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('grid')); ?>">Grid</a>
+                                    <a href="<?php echo e(url ('admin/grid')); ?>">Grid</a>
                                 </li>
                                 <li <?php echo e((Request::is('*progressbars') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('progressbars')); ?>">Progressbars</a>
+                                    <a href="<?php echo e(url ('admin/progressbars')); ?>">Progressbars</a>
                                 </li>
                                 <li <?php echo e((Request::is('*collapse') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('collapse')); ?>">Collapse</a>
+                                    <a href="<?php echo e(url ('admin/collapse')); ?>">Collapse</a>
                                 </li>
                                 <li <?php echo e((Request::is('*stats') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('stats')); ?>">Stats</a>
+                                    <a href="<?php echo e(url ('admin/stats')); ?>">Stats</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -353,16 +353,16 @@
                             </a>
                             <ul class="nav nav-second-level">
                                 <li <?php echo e((Request::is('*blank') ? 'class="active"' : '')); ?>>
-                                    <a href="<?php echo e(url ('blank')); ?>">Blank Page</a>
+                                    <a href="<?php echo e(url ('admin/blank')); ?>">Blank Page</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo e(url ('login')); ?>">Login Page</a>
+                                    <a href="<?php echo e(url ('admin/login')); ?>">Login Page</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li <?php echo e((Request::is('*documentation') ? 'class="active"' : '')); ?>>
-                            <a href="<?php echo e(url ('documentation')); ?>"><i class="fa fa-file-word-o fa-fw"></i> Documentation</a>
+                            <a href="<?php echo e(url ('admin/documentation')); ?>"><i class="fa fa-file-word-o fa-fw"></i> Documentation</a>
                         </li>
                     </ul>
                 </div>

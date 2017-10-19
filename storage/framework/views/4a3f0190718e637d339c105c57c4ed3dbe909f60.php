@@ -1,20 +1,24 @@
-<?php $__env->startSection('content'); ?>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+<?php $__env->startSection('body'); ?>
+    <div class="container">
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-md-4 col-md-offset-4 centered">
+                <?php $__env->startComponent('admin.widgets.panel'); ?>
+                    <?php $__env->slot('panelTitle', 'Please Sign In'); ?>
+                    <?php $__env->slot('panelBody'); ?>
+                        <form class="form-horizontal" role="form" method="POST" action="<?php echo e(route('login')); ?>">
+                            <?php echo e(csrf_field()); ?>
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="<?php echo e(route('login')); ?>">
-                        <?php echo e(csrf_field()); ?>
+                            <div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
+                            
 
+                            <div class="col-md-12">
+                                <label for="email" class="control-label">E-Mail Address</label>
+                                
 
-                        <div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="<?php echo e(old('email')); ?>" required autofocus>
+                                <div class="input-group">
+                                  <span class="input-group-addon" id="basic-addon1">@</span>
+                                  <input type="text" class="form-control" id="email" name="email" placeholder="email" aria-describedby="basic-addon1" value="<?php echo e(old('email')); ?>" required>
+                                </div>
 
                                 <?php if($errors->has('email')): ?>
                                     <span class="help-block">
@@ -25,10 +29,18 @@
                         </div>
 
                         <div class="form-group<?php echo e($errors->has('password') ? ' has-error' : ''); ?>">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                            
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                            <div class="col-md-12">
+                                <label for="password" class="control-label">Password</label>
+                                
+
+                                <div class="input-group">
+                                  <span class="input-group-addon" id="basic-addon1">
+                                    <i class="fa fa-key" aria-hidden="true"></i>
+                                  </span>
+                                  <input type="password" class="form-control" id="password" name="password" placeholder="password" aria-describedby="basic-addon1" required>
+                                </div>
 
                                 <?php if($errors->has('password')): ?>
                                     <span class="help-block">
@@ -48,23 +60,23 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
-                                    Forgot Your Password?
-                                </a>
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-success btn-block">
+                                        Login
+                                    </button>
+                                    <br>
+                                    <a class="btn-link" href="#">
+                                        Forgot Your Password?
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
+                        </form>
+                    <?php $__env->endSlot(); ?>
+                <?php echo $__env->renderComponent(); ?>
             </div>
         </div>
     </div>
-</div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('admin.layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

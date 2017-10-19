@@ -9,9 +9,10 @@
     <title>{{ config('app.name', 'SB Admin 2 | cham11ng') }}</title>
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('css/admin.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('css/sb-admin-2.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/sb-admin-2.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('ioconic/css/ionicons.min.css') }}">
 
 
     <!-- stylesheet for page -->

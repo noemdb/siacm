@@ -1,21 +1,24 @@
-@extends('layouts.app')
+@extends ('admin.layouts.app')
+@section ('body')
+    <div class="container">
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-md-4 col-md-offset-4 centered">
+                @component('admin.widgets.panel')
+                    @slot ('panelTitle', 'Please Sign In')
+                    @slot ('panelBody')
+                        <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
+                            {{ csrf_field() }}
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+                            <div class="col-md-12">
+                                <label for="email" class="control-label">E-Mail Address</label>
+                                {{-- <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus> --}}
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                                <div class="input-group">
+                                  <span class="input-group-addon" id="basic-addon1">@</span>
+                                  <input type="text" class="form-control" id="email" name="email" placeholder="email" aria-describedby="basic-addon1" value="{{ old('email') }}" required>
+                                </div>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -26,10 +29,18 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                            
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                            <div class="col-md-12">
+                                <label for="password" class="control-label">Password</label>
+                                {{-- <input id="password" type="password" class="form-control" name="password" required> --}}
+
+                                <div class="input-group">
+                                  <span class="input-group-addon" id="basic-addon1">
+                                    <i class="fa fa-key" aria-hidden="true"></i>
+                                  </span>
+                                  <input type="password" class="form-control" id="password" name="password" placeholder="password" aria-describedby="basic-addon1" required>
+                                </div>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -49,21 +60,21 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-success btn-block">
+                                        Login
+                                    </button>
+                                    <br>
+                                    <a class="btn-link" href="#">
+                                        Forgot Your Password?
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
+                        </form>
+                    @endslot
+                @endcomponent
             </div>
         </div>
     </div>
-</div>
 @endsection

@@ -9,9 +9,10 @@
     <title><?php echo e(config('app.name', 'SB Admin 2 | cham11ng')); ?></title>
 
     <link rel="stylesheet" href="<?php echo e(asset('css/app.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('css/admin.css')); ?>">
     
-    <link rel="stylesheet" href="<?php echo e(asset('css/sb-admin-2.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('vendor/font-awesome/css/font-awesome.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('ioconic/css/ionicons.min.css')); ?>">
 
 
     <!-- stylesheet for page -->

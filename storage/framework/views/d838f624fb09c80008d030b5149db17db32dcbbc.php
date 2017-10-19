@@ -5,10 +5,12 @@
                 <?php $__env->startComponent('admin.widgets.panel'); ?>
                     <?php $__env->slot('panelTitle', 'Please Sign In'); ?>
                     <?php $__env->slot('panelBody'); ?>
-                        <form class="form-horizontal" role="form" method="POST" action="#">
+                        <form class="form-horizontal" role="form" method="POST" action="<?php echo e(route('login')); ?>">
+                            <?php echo e(csrf_field()); ?>
+
                             <div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
                                 <div class="col-md-12">
-                                    <label for="email" class="control-label">Username</label>
+                                    <label for="email" class="control-label">Email</label>
 
                                     <input id="email" type="email" class="form-control" name="email"
                                            value="<?php echo e(old('email')); ?>" required autofocus>
