@@ -10370,10 +10370,12 @@ var lineChartData = {
 
 };
 
-var cline = document.getElementById("cline").getContext("2d");
-new Chart(cline).Line(lineChartData, {
-    responsive: true
-});
+if (typeof document.getElementById("cline")){
+	var cline = document.getElementById("cline").getContext("2d");
+	new Chart(cline).Line(lineChartData, {
+	    responsive: true
+	});
+}
 
 var pdata = [{
     value: 300,
@@ -10391,8 +10393,11 @@ var pdata = [{
     highlight: "#FFC870",
     label: "Yellow"
 }];
-var cpie = document.getElementById("cpie").getContext("2d");
-new Chart(cpie).Pie(pdata, { responsive: true });
+if (document.getElementById("cpie")){
+	var cpie = document.getElementById("cpie").getContext("2d");
+	new Chart(cpie).Pie(pdata, { responsive: true });
+}
+
 
 var ddata = [{
     value: 50,
@@ -10410,8 +10415,12 @@ var ddata = [{
     highlight: "#FFC870",
     label: "Yellow"
 }];
-var cdonut = document.getElementById("cdonut").getContext("2d");
-new Chart(cdonut).Doughnut(ddata, { responsive: true });
+if (document.getElementById("cdonut")){
+	var cdonut = document.getElementById("cdonut").getContext("2d");
+	new Chart(cdonut).Doughnut(ddata, { responsive: true });
+}
+
+
 
 var bdata = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -10430,10 +10439,12 @@ var bdata = {
     }]
 
 };
-var cbar = document.getElementById("cbar").getContext("2d");
-new Chart(cbar).Bar(bdata, {
-    responsive: true
-});
+if (document.getElementById("cbar")){
+	var cbar = document.getElementById("cbar").getContext("2d");
+	new Chart(cbar).Bar(bdata, {
+	    responsive: true
+	});
+}
 
 var podata = [{
     value: 300,
@@ -10461,16 +10472,24 @@ var podata = [{
     highlight: "#616774",
     label: "Dark Grey"
 }];
-
-var cpolar = document.getElementById("cpolar").getContext("2d");
-new Chart(cpolar).PolarArea(podata, { responsive: true });
+if (document.getElementById("cpolar")){
+	var cpolar = document.getElementById("cpolar").getContext("2d");
+	new Chart(cpolar).PolarArea(podata, { responsive: true });
+}
 
 var ddata1 = [{
-    value: 50,
+    value: 80,
     color: "#F7464A",
     highlight: "#FF5A5E",
     label: "Red"
-}, {
+},
+{
+    value: 100,
+    color: "#29B6F6",
+    highlight: "#4FC3F7",
+    label: "blue"
+},
+ {
     value: 300,
     color: "#46BFBD",
     highlight: "#5AD3D1",
@@ -10481,8 +10500,12 @@ var ddata1 = [{
     highlight: "#FFC870",
     label: "Yellow"
 }];
-var cdonut1 = document.getElementById("cdonut1").getContext("2d");
-new Chart(cdonut1).Doughnut(ddata1, { responsive: true });
+if (document.getElementById("cdonut1")){
+	var cdonut1 = document.getElementById("cdonut1").getContext("2d");
+	new Chart(cdonut1).Doughnut(ddata1, { responsive: true });
+}
+
+
 
 /***/ }),
 

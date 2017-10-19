@@ -32334,9 +32334,9 @@ if (process.env.NODE_ENV !== 'production') {
 
   warn = function (msg, vm) {
     if (hasConsole && (!config.silent)) {
-      console.error("[Vue warn]: " + msg + " " + (
-        vm ? formatLocation(formatComponentName(vm)) : ''
-      ));
+      // console.error("[Vue warn]: " + msg + " " + (
+      //   vm ? formatLocation(formatComponentName(vm)) : ''
+      // )); nmdb
     }
   };
 
@@ -39036,20 +39036,20 @@ setTimeout(function () {
     if (devtools) {
       devtools.emit('init', Vue$3);
     } else if (process.env.NODE_ENV !== 'production' && isChrome) {
-      console[console.info ? 'info' : 'log'](
-        'Download the Vue Devtools extension for a better development experience:\n' +
-        'https://github.com/vuejs/vue-devtools'
-      );
+      // console[console.info ? 'info' : 'log'](
+      //   'Download the Vue Devtools extension for a better development experience:\n' +
+      //   'https://github.com/vuejs/vue-devtools'
+      // );
     }
   }
   if (process.env.NODE_ENV !== 'production' &&
       config.productionTip !== false &&
       inBrowser && typeof console !== 'undefined') {
-    console[console.info ? 'info' : 'log'](
-      "You are running Vue in development mode.\n" +
-      "Make sure to turn on production mode when deploying for production.\n" +
-      "See more tips at https://vuejs.org/guide/deployment.html"
-    );
+    // console[console.info ? 'info' : 'log'](
+    //   "You are running Vue in development mode.\n" +
+    //   "Make sure to turn on production mode when deploying for production.\n" +
+    //   "See more tips at https://vuejs.org/guide/deployment.html"
+    // );
   }
 }, 0);
 

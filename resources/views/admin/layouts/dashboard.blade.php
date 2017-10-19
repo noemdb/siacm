@@ -4,16 +4,9 @@
     <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ url ('/admin') }}">{{ config('app.name', 'Laravel') }}</a>
-            </div>
-            <!-- /.navbar-header -->
+            
+            <!-- .navbar-header -->
+            @include('admin.layouts.partials.navbar-header')
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
@@ -265,15 +258,15 @@
 
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse out">
-                                <li>
+                            <ul class="nav nav-second-level">
+                                <li {{ (Request::is('*charts') ? 'class="active"' : '') }}>
                                     <a href="{{ url ('charts') }}"> Charts</a>
                                 </li>
                                 {{-- <li>
                                     <a href="{{ url ('flot') }}"> Flot</a>
                                 </li> --}}
-                                <li>
-                                    <a href="{{ url ('morris') }}" class="active"> Morris.js</a>
+                                <li {{ (Request::is('*morris') ? 'class="active"' : '') }}>
+                                    <a href="{{ url ('morris') }}"> Morris.js</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

@@ -23,10 +23,11 @@ body {
   }
 }
 .navbar-top-links {
-  margin-right: 0;
+  /*margin-right: 0; nmdb*/
 }
 .navbar-top-links li {
   display: inline-block;
+  float: left;/*nmdb*/
 }
 .navbar-top-links li:last-child {
   margin-right: 15px;
@@ -42,7 +43,7 @@ body {
   margin-right: 0;
 }
 .navbar-top-links .dropdown-menu li a {
-  padding: 3px 20px;
+  /*padding: 3px 20px;*/
   min-height: 0;
 }
 .navbar-top-links .dropdown-menu li a div {
@@ -55,7 +56,7 @@ body {
   min-width: 0;
 }
 .navbar-top-links .dropdown-messages {
-  margin-left: 5px;
+  margin-left: 0px;
 }
 .navbar-top-links .dropdown-tasks {
   margin-left: -59px;
@@ -78,7 +79,7 @@ body {
   border-bottom: 1px solid #e7e7e7;
 }
 .sidebar ul li a.active {
-  background-color: #eeeeee;
+  background-color: #fff;
 }
 .sidebar .arrow {
   float: right;

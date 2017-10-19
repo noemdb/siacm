@@ -6,6 +6,7 @@
 /.idea
 /.vagrant
 /storage/logs/laravel.log
+/storage/framework/views/
 Homestead.json
 Homestead.yaml
 npm-debug.log
