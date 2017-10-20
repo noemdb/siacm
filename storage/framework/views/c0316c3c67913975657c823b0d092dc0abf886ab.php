@@ -427,10 +427,11 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('scripts'); ?>
+    ##parent-placeholder-16728d18790deb58b3b8c1df74f06e536b532695##
     <script src="<?php echo e(asset("js/Chart.js")); ?>"></script>
     
     
     
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('admin.layouts.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('admin.layouts.dashboard.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

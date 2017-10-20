@@ -255,14 +255,20 @@
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <a href="#"><i class="ion-pie-graph"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="<?php echo e(url ('admin/charts/sbadmin')); ?>"> SBAdmin</a>
+                                    <a href="<?php echo e(url ('admin/charts/sbadmin')); ?>">
+                                        <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                        SBAdmin
+                                    </a>
                                 </li>
                                 
                                 <li>
-                                    <a href="<?php echo e(url ('admin/charts/morris')); ?>"> Morris.js</a>
+                                    <a href="<?php echo e(url ('admin/charts/morris')); ?>">
+                                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                        Morris.js
+                                    </a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -271,10 +277,10 @@
                         <li>
                             <a href="#"><i class="fa fa-table fa-fw"></i> Tables<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li <?php echo e((Request::is('*tables') ? 'class="active"' : '')); ?>>
+                                <li>
                                     <a href="<?php echo e(url ('admin/tables/simple')); ?>"><i class="fa fa-table fa-fw"></i> Tables</a>
                                 </li>
-                                <li <?php echo e((Request::is('*tableavance') ? 'class="active"' : '')); ?>>
+                                <li>
                                     <a href="<?php echo e(url ('admin/tables/tableavance')); ?>"><i class="fa fa-table fa-fw"></i> Tables Advance</a>
                                 </li>
                             </ul>

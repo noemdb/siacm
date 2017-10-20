@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('css/sb-admin-2.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('ioconic/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('ionicons/css/ionicons.min.css') }}">
+
 
 
     <!-- stylesheet for page -->
@@ -27,20 +28,16 @@
 
 </head>
 <body>
-@yield('body')
 
+    @yield('body')
 
+    <script src="{{ asset("js/app.js") }}"></script>
+    {{-- <script src="{{ asset("js/Chart.js") }}"></script> --}}
 
-<script src="{{ asset("js/app.js") }}"></script>
-{{-- <script src="{{ asset("js/Chart.js") }}"></script> --}}
+    <!-- scripts for page -->
+    @yield('scripts')
 
-
-<!-- scripts for page -->
-@yield('scripts')
-
-
-<script src="{{ asset("js/admin.js") }}"></script>
-
+    <script src="{{ asset("js/admin.js") }}"></script>
 
 </body>
 </html>

@@ -6,11 +6,21 @@
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             
             <!-- .navbar-header -->
-            @include('admin.layouts.partials.navbar-header')
+            @include('admin.layouts.dashboard.navbar.navbar-header')
 
             <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    {{-- <button type="button" id="sidebarCollapse" class="btn btn-default navbar-btn">
+                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                    </button> --}}
+                    <a class="dropdown-toggle alert-success btn btn-lg" id="sidebarCollapse" data-toggle="dropdown" href="#">
+                        <span class="label label-success">
+                            <i class="glyphicon glyphicon-menu-hamburger"></i>
+                        </span>
+                    </a>
+                </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle alert-primary" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle alert-primary btn btn-lg" data-toggle="dropdown" href="#">
                         <span class="label label-primary">
                             <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
                         </span>
@@ -66,7 +76,7 @@
                 </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle alert-info" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle alert-info btn btn-lg" data-toggle="dropdown" href="#">
                         <span class="label label-info">
                             <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
                         </span>
@@ -151,7 +161,7 @@
                 </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle alert-warning" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle alert-warning btn btn-lg" data-toggle="dropdown" href="#">
                         <span class="label label-warning">
                             <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
                         </span>
@@ -213,7 +223,7 @@
                 </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle alert-danger" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle alert-danger btn btn-lg" data-toggle="dropdown" href="#">
                         <span class="label label-danger">
                             <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                         </span>
@@ -238,7 +248,11 @@
             </ul>
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
+            
+            <!-- /.navbar-static-side -->
+        </nav>
+
+            <nav class="navbar-default sidebar" role="navigation" id="sidebar">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li class="sidebar-search">
@@ -257,16 +271,22 @@
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <a href="#"><i class="ion-pie-graph"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ url ('admin/charts/sbadmin') }}"> SBAdmin</a>
+                                    <a href="{{ url ('admin/charts/sbadmin') }}">
+                                        <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                        SBAdmin
+                                    </a>
                                 </li>
                                 {{-- <li>
                                     <a href="{{ url ('flot') }}"> Flot</a>
                                 </li> --}}
                                 <li>
-                                    <a href="{{ url ('admin/charts/morris') }}"> Morris.js</a>
+                                    <a href="{{ url ('admin/charts/morris') }}">
+                                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                        Morris.js
+                                    </a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -275,10 +295,10 @@
                         <li>
                             <a href="#"><i class="fa fa-table fa-fw"></i> Tables<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li {{ (Request::is('*tables') ? 'class="active"' : '') }}>
+                                <li>
                                     <a href="{{ url ('admin/tables/simple') }}"><i class="fa fa-table fa-fw"></i> Tables</a>
                                 </li>
-                                <li {{ (Request::is('*tableavance') ? 'class="active"' : '') }}>
+                                <li>
                                     <a href="{{ url ('admin/tables/tableavance') }}"><i class="fa fa-table fa-fw"></i> Tables Advance</a>
                                 </li>
                             </ul>
@@ -371,11 +391,9 @@
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
-        </nav>
+            </nav>
 
-        <div id="page-wrapper">
+        <div id="page-wrapper" class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">@yield('page_heading')</h1>
@@ -388,4 +406,18 @@
             <!-- /#page-wrapper -->
         </div>
     </div>
+@endsection
+
+@section('scripts')
+
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $('#sidebarCollapse').on('click', function () {
+                // alert('123');
+                 $('#sidebar').toggleClass('active');
+                 $("#page-wrapper").toggleClass("active");
+             });
+         });
+     </script>
+
 @endsection

@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="<?php echo e(asset('css/admin.css')); ?>">
     
     <link rel="stylesheet" href="<?php echo e(asset('vendor/font-awesome/css/font-awesome.min.css')); ?>">
-    <link rel="stylesheet" href="<?php echo e(asset('ioconic/css/ionicons.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('ionicons/css/ionicons.min.css')); ?>">
+
 
 
     <!-- stylesheet for page -->
@@ -27,20 +28,16 @@
 
 </head>
 <body>
-<?php echo $__env->yieldContent('body'); ?>
 
+    <?php echo $__env->yieldContent('body'); ?>
 
+    <script src="<?php echo e(asset("js/app.js")); ?>"></script>
+    
 
-<script src="<?php echo e(asset("js/app.js")); ?>"></script>
+    <!-- scripts for page -->
+    <?php echo $__env->yieldContent('scripts'); ?>
 
-
-
-<!-- scripts for page -->
-<?php echo $__env->yieldContent('scripts'); ?>
-
-
-<script src="<?php echo e(asset("js/admin.js")); ?>"></script>
-
+    <script src="<?php echo e(asset("js/admin.js")); ?>"></script>
 
 </body>
 </html>
