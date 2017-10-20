@@ -6794,7 +6794,10 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel {
+  /*nmdb
   margin-bottom: 22px;
+  */
+ margin-bottom: 4px;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;

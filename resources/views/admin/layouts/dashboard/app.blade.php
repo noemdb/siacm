@@ -9,389 +9,50 @@
             @include('admin.layouts.dashboard.navbar.navbar-header')
 
             <ul class="nav navbar-top-links navbar-right">
+
                 <li>
-                    {{-- <button type="button" id="sidebarCollapse" class="btn btn-default navbar-btn">
-                        <i class="glyphicon glyphicon-menu-hamburger"></i>
-                    </button> --}}
-                    <a class="dropdown-toggle alert-success btn btn-lg" id="sidebarCollapse" data-toggle="dropdown" href="#">
-                        <span class="label label-success">
-                            <i class="glyphicon glyphicon-menu-hamburger"></i>
-                        </span>
-                    </a>
+
+                    {{-- @include('admin.layouts.dashboard.navbar.top-links.hide-sidebar') --}}
+
                 </li>
+
                 <li class="dropdown">
-                    <a class="dropdown-toggle alert-primary btn btn-lg" data-toggle="dropdown" href="#">
-                        <span class="label label-primary">
-                            <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
-                        </span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-messages -->
+
+                    @include('admin.layouts.dashboard.navbar.top-links.messages')
+                    
                 </li>
-                <!-- /.dropdown -->
+                
                 <li class="dropdown">
-                    <a class="dropdown-toggle alert-info btn btn-lg" data-toggle="dropdown" href="#">
-                        <span class="label label-info">
-                            <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
-                        </span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 1</strong>
-                                        <span class="pull-right text-muted">40% Complete</span>
-                                    </p>
 
-                                    <div>
-                                        @include('admin.widgets.progress', array('animated'=> true, 'class'=>'success', 'value'=>'40'))
-                                        <span class="sr-only">40% Complete (success)</span>
-                                    </div>
+                    @include('admin.layouts.dashboard.navbar.top-links.tasks')
 
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 2</strong>
-                                        <span class="pull-right text-muted">20% Complete</span>
-                                    </p>
-
-                                    <div>
-                                        @include('admin.widgets.progress', array('animated'=> true, 'class'=>'info', 'value'=>'20'))
-                                        <span class="sr-only">20% Complete</span>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 3</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-
-                                    <div>
-                                        @include('admin.widgets.progress', array('animated'=> true, 'class'=>'warning', 'value'=>'60'))
-                                        <span class="sr-only">60% Complete (warning)</span>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 4</strong>
-                                        <span class="pull-right text-muted">80% Complete</span>
-                                    </p>
-
-                                    <div>
-                                        @include('admin.widgets.progress', array('animated'=> true,'class'=>'danger', 'value'=>'80'))
-                                        <span class="sr-only">80% Complete (danger)</span>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Tasks</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-tasks -->
                 </li>
-                <!-- /.dropdown -->
+                
                 <li class="dropdown">
-                    <a class="dropdown-toggle alert-warning btn btn-lg" data-toggle="dropdown" href="#">
-                        <span class="label label-warning">
-                            <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-                        </span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-alerts -->
+
+                    @include('admin.layouts.dashboard.navbar.top-links.alerts')
+
                 </li>
-                <!-- /.dropdown -->
+
                 <li class="dropdown">
-                    <a class="dropdown-toggle alert-danger btn btn-lg" data-toggle="dropdown" href="#">
-                        <span class="label label-danger">
-                            <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                        </span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="{{ url('login') }}">
-                                <i class="fa fa-sign-out fa-fw"></i> Logout
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
+                    
+                    @include('admin.layouts.dashboard.navbar.top-links.user')
+
                 </li>
-                <!-- /.dropdown -->
+
             </ul>
             <!-- /.navbar-top-links -->
-
             
             <!-- /.navbar-static-side -->
         </nav>
 
-            <nav class="navbar-default sidebar" role="navigation" id="sidebar">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
-                        <li>
-                            <a href="{{ url ('dashboard') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                        </li>
+        {{-- INI sidebar --}}
+        <nav class="navbar-default sidebar" role="navigation" id="sidebar">
 
-                        <li>
-                            <a href="#"><i class="ion-pie-graph"></i> Charts<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="{{ url ('admin/charts/sbadmin') }}">
-                                        <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                        SBAdmin
-                                    </a>
-                                </li>
-                                {{-- <li>
-                                    <a href="{{ url ('flot') }}"> Flot</a>
-                                </li> --}}
-                                <li>
-                                    <a href="{{ url ('admin/charts/morris') }}">
-                                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                                        Morris.js
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
+            @include('admin.layouts.dashboard.sidebar.navbar-collapse')
 
-                        <li>
-                            <a href="#"><i class="fa fa-table fa-fw"></i> Tables<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="{{ url ('admin/tables/simple') }}"><i class="fa fa-table fa-fw"></i> Tables</a>
-                                </li>
-                                <li>
-                                    <a href="{{ url ('admin/tables/tableavance') }}"><i class="fa fa-table fa-fw"></i> Tables Advance</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li {{ (Request::is('*forms') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('admin/forms') }}"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li {{ (Request::is('*panels') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('admin/panels') }}">Panels and Collapsibles</a>
-                                </li>
-                                <li {{ (Request::is('*buttons') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('admin/buttons' ) }}">Buttons</a>
-                                </li>
-                                <li {{ (Request::is('*notifications') ? 'class="active"' : '') }}>
-                                    <a href="{{ url('admin/notifications') }}">Alerts</a>
-                                </li>
-                                <li {{ (Request::is('*typography') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('admin/typography') }}">Typography</a>
-                                </li>
-                                <li {{ (Request::is('*icons') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('icons') }}"> Icons</a>
-                                </li>
-                                <li {{ (Request::is('*grid') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('admin/grid') }}">Grid</a>
-                                </li>
-                                <li {{ (Request::is('*progressbars') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('admin/progressbars') }}">Progressbars</a>
-                                </li>
-                                <li {{ (Request::is('*collapse') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('admin/collapse') }}">Collapse</a>
-                                </li>
-                                <li {{ (Request::is('*stats') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('admin/stats') }}">Stats</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span>
-                            </a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                    </ul>
-                                    <!-- /.nav-third-level -->
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span>
-                            </a>
-                            <ul class="nav nav-second-level">
-                                <li {{ (Request::is('*blank') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('admin/blank') }}">Blank Page</a>
-                                </li>
-                                <li>
-                                    <a href="{{ url ('admin/login') }}">Login Page</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li {{ (Request::is('*documentation') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('admin/documentation') }}"><i class="fa fa-file-word-o fa-fw"></i> Documentation</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </nav>
+        </nav>
+        {{-- FIN sidebar --}}
 
         <div id="page-wrapper" class="container-fluid">
             <div class="row">
@@ -413,7 +74,6 @@
      <script type="text/javascript">
          $(document).ready(function () {
              $('#sidebarCollapse').on('click', function () {
-                // alert('123');
                  $('#sidebar').toggleClass('active');
                  $("#page-wrapper").toggleClass("active");
              });

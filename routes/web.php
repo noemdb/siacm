@@ -18,14 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/dashboard', function () {
     return view('admin.home');
 })->middleware('auth');
 
 Route::group(['prefix'=>'admin','middleware'=>['auth'],'namespace'=>'Admin'], function(){
-    // Route::get('/dashboar', function () {
-    //     return view('home');
-    // });
+
     Route::get('/login', function () {
         return view('admin.auth.login');
     });
@@ -81,6 +83,3 @@ Route::group(['prefix'=>'admin','middleware'=>['auth'],'namespace'=>'Admin'], fu
         return View::make('admin.collapse');
     });
 });
-
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');

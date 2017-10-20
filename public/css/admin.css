@@ -93,7 +93,10 @@ body {
 }
 
 .sidebar .sidebar-search {
+  /*
   padding: 15px;
+  nmdb*/
+  padding: 6px;
 }
 
 .sidebar ul li {
