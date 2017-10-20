@@ -13,10 +13,10 @@
 		<span class="caret"></span>
 	</button>
 
-@endif
+	@endif
 
 	<ul class="dropdown-menu" role="menu">
-		@if (isset($submenu))
+		@if (isset($submenu) && is_array($submenu)>0)
 			@foreach ($submenu as $menu)
 				<li><a href="{{ $menu['link'] }}"> {{ $menu['name']  }}</a></li>
 			@endforeach

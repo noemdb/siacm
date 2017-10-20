@@ -5,49 +5,39 @@
             @include('admin.layouts.dashboard.sidebar.elements.profile')
         </li>
 
-        <li class="sidebar-search">
-            @include('admin.layouts.dashboard.sidebar.elements.sidebar-search')
-        </li>
-
-        
-        
         <li>
             <a href="{{ url ('dashboard') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
         </li>
 
-        <li>
-            <a href="#"><i class="ion-pie-graph"></i> Charts<span class="fa arrow"></span></a>
-            <ul class="nav nav-second-level">
-                <li>
-                    <a href="{{ url ('admin/charts/sbadmin') }}">
-                        <i class="fa fa-area-chart" aria-hidden="true"></i>
-                        SBAdmin
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url ('admin/charts/morris') }}">
-                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                        Morris.js
-                    </a>
-                </li>
-            </ul>
-            <!-- /.nav-second-level -->
+        <li class="sidebar-search">
+            @include('admin.layouts.dashboard.sidebar.elements.sidebar-search')
         </li>
 
-        <li>
-            <a href="#"><i class="fa fa-table fa-fw"></i> Tables<span class="fa arrow"></span></a>
-            <ul class="nav nav-second-level">
-                <li>
-                    <a href="{{ url ('admin/tables/simple') }}"><i class="fa fa-table fa-fw"></i> Tables</a>
-                </li>
-                <li>
-                    <a href="{{ url ('admin/tables/tableavance') }}"><i class="fa fa-table fa-fw"></i> Tables Advance</a>
-                </li>
-            </ul>
+        <li {{ (Request::is('*charts') ? 'class="active"' : '') }}>
+            @php ($split=true)
+            @php ($class='')
+            @php ($rounded='')
+            @php ($bordered='')
+            @php ($size='')
+            {{-- @php ($disabled='') --}}
+            @php ($value='Charts')
+            @php ($submenu=array(['link'=>'#','name'=>'SBAdmin'],['link'=>'#','name'=>'Morris']))
+
+            @include('admin.widgets.dropdown-button')
         </li>
+
+        <li {{ (Request::is('*charts') ? 'class="active"' : '') }}>
+            @include('admin.layouts.dashboard.sidebar.elements.charts')
+        </li>
+
+        <li {{ (Request::is('*tables') ? 'class="active"' : '') }}>
+            @include('admin.layouts.dashboard.sidebar.elements.tables')
+        </li>
+
         <li {{ (Request::is('*forms') ? 'class="active"' : '') }}>
             <a href="{{ url ('admin/forms') }}"><i class="fa fa-edit fa-fw"></i> Forms</a>
         </li>
+        
         <li>
             <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
