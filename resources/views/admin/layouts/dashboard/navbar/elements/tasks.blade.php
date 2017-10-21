@@ -1,7 +1,8 @@
-<a class="dropdown-toggle alert-info btn btn-lg" data-toggle="dropdown" href="#">
-    <span class="label label-info">
-        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
-    </span>
+<a class="dropdown-toggle alert-info btn" data-toggle="dropdown" href="#">
+    {{-- <span class="label label-info"> --}}
+        <i class="fa fa-tasks fa-fw fa-2x"></i> <i class="fa fa-caret-down"></i>
+        <span class="label label-info">3</span>
+    {{-- </span> --}}
 </a>
 <ul class="dropdown-menu dropdown-tasks">
     <li>

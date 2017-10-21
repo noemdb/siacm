@@ -1,7 +1,8 @@
-<a class="dropdown-toggle alert-warning btn btn-lg" data-toggle="dropdown" href="#">
-    <span class="label label-warning">
-        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-    </span>
+<a class="dropdown-toggle alert-warning btn" data-toggle="dropdown" href="#">
+    {{-- <span class="label label-warning"> --}}
+        <i class="fa fa-bell fa-fw fa-2x"></i> <i class="fa fa-caret-down"></i>
+        <span class="label label-warning">34</span>
+    {{-- </span> --}}
 </a>
 <ul class="dropdown-menu dropdown-alerts">
     <li>

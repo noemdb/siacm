@@ -1,4 +1,4 @@
-@extends ('admin.layouts.dashboard')
+@extends('admin.layouts.dashboard.app')
 
 @section('page_heading','Charts')
 
@@ -78,6 +78,7 @@
 @endsection
 
 @section('scripts')
+    @parent
     <script src="{{ asset("js/Chart.js") }}"></script>
     {{-- <script src="{{ asset("vendor/raphael/raphael.min.js") }}"></script>
     <script src="{{ asset("vendor/morrisjs/morris.min.js") }}"></script>

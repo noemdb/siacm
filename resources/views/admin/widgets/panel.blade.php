@@ -2,7 +2,7 @@
     @if (isset($panelTitle))
         <div class="panel-heading">
             <h3 class="panel-title">
-                {{ $panelTitle}}
+                {{ $panelTitle }}
                 @if (isset($panelControls))
                     <div class="panel-control pull-right">
                         <a class="panelButton"><i class="fa fa-refresh"></i></a>

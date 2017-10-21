@@ -9,7 +9,6 @@
                             <?php echo e(csrf_field()); ?>
 
                             <div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
-                            
 
                             <div class="col-md-12">
                                 <label for="email" class="control-label">E-Mail Address</label>

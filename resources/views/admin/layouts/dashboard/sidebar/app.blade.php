@@ -1,29 +1,16 @@
-<div class="sidebar-nav navbar-collapse">
+<div class="sidebar-nav navbar-collapse" style="">
     <ul class="nav" id="side-menu">
         
         <li>
             @include('admin.layouts.dashboard.sidebar.elements.profile')
         </li>
 
-        <li>
-            <a href="{{ url ('dashboard') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-        </li>
-
         <li class="sidebar-search">
             @include('admin.layouts.dashboard.sidebar.elements.sidebar-search')
         </li>
 
-        <li {{ (Request::is('*charts') ? 'class="active"' : '') }}>
-            @php ($split=true)
-            @php ($class='')
-            @php ($rounded='')
-            @php ($bordered='')
-            @php ($size='')
-            {{-- @php ($disabled='') --}}
-            @php ($value='Charts')
-            @php ($submenu=array(['link'=>'#','name'=>'SBAdmin'],['link'=>'#','name'=>'Morris']))
-
-            @include('admin.widgets.dropdown-button')
+        <li>
+            <a href="{{ url ('dashboard') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
         </li>
 
         <li {{ (Request::is('*charts') ? 'class="active"' : '') }}>
@@ -54,7 +41,7 @@
                     <a href="{{ url ('admin/typography') }}">Typography</a>
                 </li>
                 <li {{ (Request::is('*icons') ? 'class="active"' : '') }}>
-                    <a href="{{ url ('icons') }}"> Icons</a>
+                    <a href="{{ url ('admin/icons') }}"> Icons</a>
                 </li>
                 <li {{ (Request::is('*grid') ? 'class="active"' : '') }}>
                     <a href="{{ url ('admin/grid') }}">Grid</a>

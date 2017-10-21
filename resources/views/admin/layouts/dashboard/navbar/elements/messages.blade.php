@@ -1,8 +1,9 @@
 {{-- INI dropdown-messages --}}
-<a class="dropdown-toggle alert-primary btn btn-lg" data-toggle="dropdown" href="#">
-    <span class="label label-primary">
-        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
-    </span>
+<a class="dropdown-toggle alert-primary btn" data-toggle="dropdown" href="#">
+    {{-- <span class="label label-primary"> --}}
+        <i class="fa fa-envelope fa-fw fa-2x"></i> <i class="fa fa-caret-down"></i>
+        <span class="label label-primary">42</span>        
+    {{-- </span> --}}
 </a>
 
 <ul class="dropdown-menu dropdown-messages">

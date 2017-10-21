@@ -1,4 +1,4 @@
-@extends ('admin.layouts.dashboard')
+@extends('admin.layouts.dashboard.app')
 
 @section ('page_heading','Documentation')
 
